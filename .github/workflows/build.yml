@@ -1,0 +1,22 @@
+name: C Program CI
+
+on:
+  push:
+    path:
+      - '**.c'
+      - '.github/workflows/**'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: リポジトリをチェックアウト
+        uses: actions/checkout@v3
+
+      -name: Cファイルをコンパイル
+       run: gcc -o HelloWorld HelloWorld.C
+
+      -name: 実行して出力を確認
+       run: ./HelloWorld
