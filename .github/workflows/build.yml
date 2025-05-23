@@ -15,8 +15,8 @@ jobs:
       - name: リポジトリをチェックアウト
         uses: actions/checkout@v3
 
-      -name: Cファイルをコンパイル
-       run: gcc -o HelloWorld HelloWorld.C
+      - name: Cファイルをコンパイル
+        run: gcc -o HelloWorld HelloWorld.C
 
-      -name: 実行して出力を確認
-       run: ./HelloWorld
+      - name: 実行して出力を確認
+        run: ./HelloWorld
